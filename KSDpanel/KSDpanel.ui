@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KSDpanel</class>
+ <widget class="QDialog" name="KSDpanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>850</width>
+    <height>755</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Enter Position</string>
+  </property>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>831</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:36pt; font-weight:600;&quot;&gt;KSDpanel _ v2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>90</y>
+     <width>16</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Seleccionar familia:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="modeloPanelUI">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>111</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Familia STB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Familia A</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Familia B</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Familia C</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Familia D</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Familia E</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Familia F</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Familia G</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="anadirFavoritos">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 209, 0);</string>
+   </property>
+   <property name="text">
+    <string>Añadir a favoritos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="eliminarFavoritos">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>140</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(234, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Eliminar de favoritos</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>180</y>
+     <width>241</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Favoritos</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>410</y>
+     <width>241</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Paneles familia seleccionada</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="imagenPanelUI">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>90</y>
+     <width>551</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../imagenes/REF_AH.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA0">
+   <property name="geometry">
+    <rect>
+     <x>328</x>
+     <y>380</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A0</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA1">
+   <property name="geometry">
+    <rect>
+     <x>399</x>
+     <y>380</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A1</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA2">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>380</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A2</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA3">
+   <property name="geometry">
+    <rect>
+     <x>328</x>
+     <y>403</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A3</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA4">
+   <property name="geometry">
+    <rect>
+     <x>399</x>
+     <y>403</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A4</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA5">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>403</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A5</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA6">
+   <property name="geometry">
+    <rect>
+     <x>328</x>
+     <y>426</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A6</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA7">
+   <property name="geometry">
+    <rect>
+     <x>399</x>
+     <y>426</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A7</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelA8">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>426</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel A8</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB0">
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>385</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B0</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB1">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>385</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B1</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB2">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>385</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B2</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB3">
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>408</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B3</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB4">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>408</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B4</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB5">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>408</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B5</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB6">
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>431</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B6</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB7">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>431</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B7</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB8">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>431</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B8</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB9">
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>454</y>
+     <width>64</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B9</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB10">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>454</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B10</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB11">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>454</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B11</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB12">
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>477</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B12</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB13">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>477</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B13</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB14">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>477</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B14</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB15">
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>500</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B15</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB16">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>500</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B16</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelB17">
+   <property name="geometry">
+    <rect>
+     <x>716</x>
+     <y>500</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel B17</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC0">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>457</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C0</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC1">
+   <property name="geometry">
+    <rect>
+     <x>401</x>
+     <y>457</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C1</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC2">
+   <property name="geometry">
+    <rect>
+     <x>472</x>
+     <y>457</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C2</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC_4">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>480</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C3</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC4">
+   <property name="geometry">
+    <rect>
+     <x>401</x>
+     <y>480</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C4</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC5">
+   <property name="geometry">
+    <rect>
+     <x>472</x>
+     <y>480</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C5</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC6">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>503</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C6</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC7">
+   <property name="geometry">
+    <rect>
+     <x>401</x>
+     <y>503</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C7</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="modeloPanelC8">
+   <property name="geometry">
+    <rect>
+     <x>472</x>
+     <y>503</y>
+     <width>65</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Panel C8</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>380</y>
+     <width>16</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>440</y>
+     <width>211</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>540</y>
+     <width>156</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>690</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>prueba</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="textoSalida">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>690</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
